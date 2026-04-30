@@ -3,51 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copra Trading</title>
+    <meta name="description" content="Copra Trading - Reliable sourcing and trading of premium copra with bulk trading and logistics support.">
+    <meta name="theme-color" content="#2c3e50">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Copra Trading - Quality Copra Supply">
+    <meta property="og:description" content="Reliable sourcing and trading of premium copra with bulk trading and logistics support.">
+    <meta property="og:site_name" content="Copra Trading">
+    <meta name="twitter:card" content="summary">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.copratrading.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>Copra Trading - Quality Copra Supply & Trading</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 
-<header>
-    <h1>Copra Trading</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<header role="banner">
+    <div class="header-container">
+        <h1>Copra Trading</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" aria-label="Navigate to Home">Home</a></li>
+                <li><a href="#about" aria-label="Navigate to About Us">About</a></li>
+                <li><a href="#services" aria-label="Navigate to Our Services">Services</a></li>
+                <li><a href="#contact" aria-label="Navigate to Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<section id="home" class="hero">
-    <h2>Quality Copra Supply</h2>
-    <p>Reliable sourcing and trading of premium copra.</p>
-    <button onclick="scrollToSection('contact')">Get in Touch</button>
-</section>
+<main>
+    <section id="home" class="hero" aria-labelledby="home-title">
+        <div class="hero-content">
+            <h2 id="home-title">Quality Copra Supply</h2>
+            <p>Reliable sourcing and trading of premium copra.</p>
+            <button class="cta-button" onclick="scrollToSection('contact')">Get in Touch</button>
+        </div>
+    </section>
 
-<section id="about" class="fade-in">
-    <h2>About Us</h2>
-    <p>We specialize in sourcing and trading high-quality copra, ensuring consistency and reliability for our partners.</p>
-</section>
+    <article id="about" class="fade-in" aria-labelledby="about-title">
+        <div class="section-content">
+            <h2 id="about-title">About Us</h2>
+            <p>We specialize in sourcing and trading high-quality copra, ensuring consistency and reliability for our partners. With years of experience in the agricultural commodities market, we provide transparent and professional trading services.</p>
+        </div>
+    </article>
 
-<section id="services" class="fade-in">
-    <h2>Our Services</h2>
-    <ul>
-        <li>Copra Supply</li>
-        <li>Bulk Trading</li>
-        <li>Logistics Support</li>
-    </ul>
-</section>
+    <article id="services" class="fade-in" aria-labelledby="services-title">
+        <div class="section-content">
+            <h2 id="services-title">Our Services</h2>
+            <ul class="services-list" role="list">
+                <li role="listitem">
+                    <h3>Copra Supply</h3>
+                    <p>Direct access to premium copra sourced from trusted suppliers.</p>
+                </li>
+                <li role="listitem">
+                    <h3>Bulk Trading</h3>
+                    <p>Competitive pricing on large-volume orders with flexible payment terms.</p>
+                </li>
+                <li role="listitem">
+                    <h3>Logistics Support</h3>
+                    <p>End-to-end logistics coordination and supply chain management.</p>
+                </li>
+            </ul>
+        </div>
+    </article>
 
-<section id="contact" class="fade-in">
-    <h2>Contact Us</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone: +63 xxx xxx xxxx</p>
-</section>
+    <article id="contact" class="fade-in" aria-labelledby="contact-title">
+        <div class="section-content">
+            <h2 id="contact-title">Contact Us</h2>
+            <address>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:info@copratrading.io">info@copratrading.io</a>
+                </p>
+                <p>
+                    <strong>Phone:</strong> <a href="tel:+63-2-1234-5678">+63 (2) 1234-5678</a>
+                </p>
+                <p>
+                    <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (PST)
+                </p>
+            </address>
+            
+            <form class="contact-form" method="POST" action="/submit-contact" aria-labelledby="contact-form-title">
+                <h3 id="contact-form-title">Send us a Message</h3>
+                
+                <div class="form-group">
+                    <label for="name">Name <span aria-label="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        aria-required="true"
+                        placeholder="Your full name">
+                </div>
 
-<footer>
-    <p>© 2026 Copra Trading</p>
+                <div class="form-group">
+                    <label for="email">Email <span aria-label="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        aria-required="true"
+                        placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject <span aria-label="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        required 
+                        aria-required="true"
+                        placeholder="How can we help?">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span aria-label="required">*</span></label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        required 
+                        aria-required="true"
+                        placeholder="Please describe your inquiry..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </article>
+</main>
+
+<footer role="contentinfo">
+    <div class="footer-content">
+        <p>&copy; <span id="year">2026</span> Copra Trading. All rights reserved.</p>
+        <nav aria-label="Footer Links" class="footer-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Copra Trading",
+  "description": "Reliable sourcing and trading of premium copra",
+  "url": "https://www.copratrading.io",
+  "telephone": "+63-2-1234-5678",
+  "email": "info@copratrading.io",
+  "areaServed": "PH",
+  "priceRange": "$$",
+  "knowsAbout": ["Copra", "Agricultural Commodities", "Bulk Trading", "Logistics"]
+}
+</script>
+
+<script src="script.js" defer></script>
+<script>
+    // Auto-update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
